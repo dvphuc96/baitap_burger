@@ -16,7 +16,8 @@ export const burgerReducer = (state = stateDefault, action) => {
   switch (action.type) {
     case "CHANGE_QUANTITY": {
       let { name, quantity } = action.payload;
-      if (quantity === -1 && state.burger[name] < 1) {
+      if (quantity === -1 && state.burger[name] <= 1) {
+        alert('Số lượng tối thiểu là 1');
         return { ...state };
       }
       let burgerUpdate = { ...state.burger };
