@@ -7,7 +7,7 @@ class BaiTapBurger extends Component {
     return Object.entries(buger).map(([topping, value], index) => {
       let arrTopping = [];
       for (let i = 0; i < value; i++) {
-        arrTopping.push(<div key={index} className={topping}></div>);
+        arrTopping.push(<div key={i} className={topping}></div>);
       }
       return arrTopping;
     });
@@ -46,10 +46,8 @@ class BaiTapBurger extends Component {
   handleChangeQuantity = (name, quantity) => {
     const action = {
       type: "CHANGE_QUANTITY",
-      payload: {
-        name,
-        quantity,
-      },
+      name,
+      quantity,
     };
     this.props.dispatch(action);
   };
