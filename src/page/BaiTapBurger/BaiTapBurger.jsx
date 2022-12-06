@@ -37,8 +37,8 @@ class BaiTapBurger extends Component {
               -
             </button>
           </td>
-          <td>{value}</td>
-          <td>{buger[propsMenu] * value}</td>
+          <td>{value} $</td>
+          <td>{buger[propsMenu] * value} $</td>
         </tr>
       );
     });
@@ -81,7 +81,7 @@ class BaiTapBurger extends Component {
                   <tr>
                     <td colSpan="2" align="right"></td>
                     <td>Tổng tiền</td>
-                    <td>{total}</td>
+                    <td>{total} $</td>
                   </tr>
                 </tfoot>
               </table>
